@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civic App Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Clean & Green Civic App</h1>
+    <nav>
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('user')">User</button>
+      <button onclick="showPage('municipality')">Municipality</button>
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <section id="home" class="page">
+    <h2>Welcome to Smart Town</h2>
+    <p>Empowering citizens for a cleaner and greener future 🌱</p>
+    <img src="https://i.ibb.co/j3rQyhh/clean-green.jpg" alt="Clean Green" style="width:100%;max-width:600px;border-radius:10px;">
+  </section>
+
+  <!-- User Page -->
+  <section id="user" class="page hidden">
+    <h2>User Interface</h2>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="text" id="area" placeholder="Enter your area" required>
+      <button type="submit">Create Profile</button>
+    </form>
+    <button onclick="addWaste()">Add Waste</button>
+    <button onclick="showDashboard()">View Dashboard</button>
+  </section>
+
+  <!-- Municipality Page -->
+  <section id="municipality" class="page hidden">
+    <h2>Municipality Interface</h2>
+    <div id="leaderboard">
+      <h3>Leaderboard</h3>
+      <table id="leaderboardTable">
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Area</th>
+          <th>Points</th>
+        </tr>
+      </table>
+    </div>
+    <div id="map">
+      <h3>Segregation Map</h3>
+      <img src="https://i.ibb.co/f8S6gRW/indian-town-map-demo.png" alt="Demo Town Map" style="width:100%; max-width:500px; border:1px solid #ccc; border-radius:10px;">
+      <p><span style="color:green;">● Green</span> = Good Segregation</p>
+      <p><span style="color:red;">● Red</span> = Poor Segregation</p>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="page hidden">
+    <h2>User Dashboard</h2>
+    <div id="dashboardContent"></div>
+    <button onclick="showPage('user')">Back</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
